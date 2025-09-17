@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate} from 'react-router-dom';
 import { Phone, MapPin, Clock } from 'lucide-react';
 import { MdMailOutline } from "react-icons/md";
-import './Footer.css';
+import './footer.css';
 
 
 export default function Footer() {
