@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { ObjectId } = require('mongodb');
-const { connectToMongoDB } = require('../../config/db');
+const { getDB } = require('../../config/db');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'defaultSecret';
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';
@@ -10,7 +10,7 @@ const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';
 exports.register = async (req, res) => {
   try {
     const { username, email, password } = req.body;
-    const db = connectToMongoDB();
+    const db = getDB();
 
     const existingUser = await db.collection('users').findOne({ $or: [{ email }, { username }] });
     if (existingUser) {
