@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 
 const authRoutes = require("./modules/auth/authRoutes");
 const cartRoutes = require("./modules/cart/cartRoutes");
+const hostelRoutes = require("./modules/hostel/hostelRoutes");
 const app = express();
 
 app.use(cors());
@@ -15,5 +16,6 @@ app.use(cookieParser());
 // ✅ Routes
 app.use("/api", authRoutes);
 app.use("/api", cartRoutes);
+app.use("/api", hostelRoutes);
 
 module.exports = app;
