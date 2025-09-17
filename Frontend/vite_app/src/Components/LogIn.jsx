@@ -12,7 +12,7 @@ const MainLogin = () => {
     console.log("Sending user data:", user); // <-- Check if user data is present
   
     try {
-      const response = await axios.post("http://localhost:5500/api/auth/login", {
+      const response = await axios.post("https://homy-cnqt.onrender.com/api/auth/login", {
         username: user.name,
         email: user.email,
         picture: user.picture,

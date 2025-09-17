@@ -161,7 +161,7 @@ const MealDetails = () => {
         const fetchMealDetails = async () => {
             try {
                 console.log("Fetching meal with ID:", id); // Debugging
-                const response = await fetch(`http://localhost:5000/meals/${id}`);
+                const response = await fetch(`https://homy-cnqt.onrender.com/api/meals/${id}`);
                 if (!response.ok) {
                     throw new Error("Meal not found");
                 }

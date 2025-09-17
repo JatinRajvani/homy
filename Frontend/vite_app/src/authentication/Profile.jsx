@@ -109,7 +109,7 @@ const Profile = () => {
 
       console.log("📤 Sending user data to backend:", auth0User);
 
-      const response = await axios.post("http://localhost:5500/api/auth/login", {
+      const response = await axios.post("https://homy-cnqt.onrender.com/api/auth/login", {
         username: auth0User.name,
         email: auth0User.email,
         picture: auth0User.picture,

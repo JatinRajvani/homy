@@ -189,7 +189,7 @@ const HostelList = () => {
 
   const fetchHostels = async () => {
     try {
-      const response = await fetch("http://localhost:3000/hostels");
+      const response = await fetch("https://homy-cnqt.onrender.com/api/hostel");
       const data = await response.json();
 
       const hostels = data.reduce((acc, area) => {

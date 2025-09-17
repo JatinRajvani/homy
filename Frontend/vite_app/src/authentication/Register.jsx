@@ -14,7 +14,7 @@ const Register =()=>{
     const userData ={username,password,email};
 
     try{
-        const response=await fetch('http://localhost:5500/api/register',{
+        const response=await fetch('https://homy-cnqt.onrender.com/api/register',{
         method:"Post",
         headers:{"Content-Type": "application/json"},
         body: JSON.stringify(userData),
